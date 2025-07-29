@@ -1,0 +1,38 @@
+.layout {
+  background: transparent;
+  cursor: url('/Cursor2.png'), auto;
+}
+
+/* Make sure all clickable elements show Pointer.png */
+button,
+a,
+input[type='button'],
+input[type='submit'],
+input[type='checkbox'],
+input[type='radio'],
+label,
+[role='button'],
+[onclick] {
+  cursor: url('/Pointer.png'), pointer;
+}
+
+.layout_header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.layout_header_outlet {
+  overflow-x: hidden !important;
+  height: 100vh;
+  overflow-y: scroll;
+  
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  /* Show thin red scrollbar on hover */
+}

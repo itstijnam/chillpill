@@ -1,0 +1,26 @@
+
+
+.MoviesPage{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    justify-content: center ;
+    align-items: center;
+    padding: 6rem 6%;
+}
+
+.moviespage_movie_card{
+    height: 100%;
+}
+
+.moviespage_moviestats{
+      display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 8px;
+  font-size: 12px;
+//   border: 2px solid red;
+  margin-top: 100%;
+}

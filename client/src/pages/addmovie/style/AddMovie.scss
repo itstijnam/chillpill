@@ -1,0 +1,200 @@
+.addmovie_page {
+    //   width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #000000, #000000, #000000);
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 6rem 6%;
+
+    .addmovie_container {
+        width: 100%;
+        max-width: 1200px;
+
+        .addmovie_heading {
+            //   text-align: center;
+            margin-bottom: 2rem;
+
+            h1 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                // margin-bottom: 0.5rem;
+                color: red;
+            }
+
+            span {
+                font-size: 1rem;
+                color: #bbb;
+            }
+        }
+
+        .addmovie_form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            //   background: rgba(255, 255, 255, 0.05);
+            //   border-radius: 20px;
+            padding: 2rem;
+
+            .amf_left,
+            .amf_right {
+                flex: 1;
+                min-width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .imageupload {
+                display: flex;
+                flex-direction: column;
+                gap: 0.8rem;
+
+                input[type='file'] {
+                    display: none;
+                }
+
+                .preview_image {
+                    width: 50%;
+                    height: auto;
+                    object-fit: cover;
+                    //   border: 2px solid red;
+                }
+
+                button {
+                    padding: 0.6rem 1.2rem;
+                    border: none;
+                    background: red;
+                    color: white;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: 0.3s;
+                    width: 10rem;
+
+                    &:hover {
+                        background: rgb(236, 26, 26);
+                    }
+                }
+            }
+
+            .about_movie {
+                textarea {
+                    width: 100%;
+                    min-height: 120px;
+                    resize: none;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    border: none;
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                    font-size: 1rem;
+                    box-sizing: border-box;
+                }
+            }
+
+            .uploadmovie_check {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                font-size: 1rem;
+
+                input[type='checkbox'] {
+                    width: 18px;
+                    height: 18px;
+                    accent-color: red;
+                    cursor: pointer;
+                }
+            }
+
+            .form_field {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                box-sizing: border-box;
+
+                span {
+                    font-weight: 600;
+                }
+
+                input[type='text'],
+                input[type='file'] {
+                    box-sizing: border-box;
+                    padding: 0.7rem 1rem;
+                    border-radius: 8px;
+                    border: none;
+                    background: rgba(255, 255, 255, 0.1);
+                    color: #fff;
+                    font-size: 1rem;
+                }
+
+                .language_tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                    margin-top: 0.5rem;
+                }
+
+                .language_tag {
+                    background: red;
+                    color: white;
+                    padding: 0.4rem 0.8rem;
+                    border-radius: 20px 0px 20px 0;
+                    font-size: 0.9rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+
+                    .remove_tag {
+                        cursor: pointer;
+                        font-weight: bold;
+                        font-size: 1rem;
+                        line-height: 1;
+                        color: #222;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.add_action_btn {
+    display: flex;
+    // justify-content: center;
+    // align-items: center;
+    background: red;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    box-shadow: 0 12px 6px white;
+    width: 5rem;
+
+
+    button {
+        border: none;
+        // transform: rotate(90deg);
+        background: none;
+        border: none;
+        font-weight: 400;
+        // border: 2px solid black;
+        width: 100%;
+        font-size: 4rem;
+
+
+    }
+
+    &:active {
+        box-shadow: 0 2px 2px white;
+        transform: translateY(4px);
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .addmovie_form {
+        flex-direction: column !important;
+    }
+}
