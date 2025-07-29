@@ -19,7 +19,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
-const allowedOrigins = [process.env.FRONTEND_URL, "http://localhost:5173"];
+const allowedOrigins = [process.env.FRONTEND_URL, "https://chillpillbackend.vercel.app", "http://localhost:5173"];
 
 const corsOptions = {
     origin: function (origin, callback) {
