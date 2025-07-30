@@ -18,6 +18,8 @@ function Home() {
       
       <IndianMovies movies={movies} movieCat={'comedy'} />
       <IndianMovies movies={movies} movieCat={'action'} />
+      <IndianMovies movies={movies} movieCat={'adventure'} />
+      <IndianMovies movies={movies} movieCat={'horror'} />
 
     </div>
   )

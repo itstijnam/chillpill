@@ -241,7 +241,7 @@ function AddMovie() {
           </div>
 
           <div className="add_action_btn">
-            <button type='submit' disabled={loading}>{loading ? 'Uploading...' : '+'}</button>
+            <button type='submit' disabled={loading}>{loading ? '...' : '+'}</button>
           </div>
 
           {message && <div className="form_message">{message}</div>}

@@ -75,7 +75,7 @@ const IndianMovies = ({ movies, movieCat }) => {
 
                   </div>
                   <div className="movie-genres">
-                    {movie?.filam_genre?.join(" • ")}
+                    {movie?.filam_genre?.slice(0,3)?.join(" • ")}
                   </div>
                 </div>
                 <div className="movie-title">{movie?.film_name}</div>
