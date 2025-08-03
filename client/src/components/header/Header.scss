@@ -1,7 +1,7 @@
 .Header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   padding: 1rem 2rem;
   // background-color: #0f0f0f;
   background-color: transparent;
@@ -11,6 +11,7 @@
   width: 100%;
   box-sizing: border-box;
   position: absolute;
+  // border: 2px solid red;
 
   .Header_left {
     display: flex;
@@ -91,6 +92,8 @@
     }
 
     .notification_icon {
+      display: none;
+
       button {
         background: transparent;
         border: none;
@@ -156,7 +159,7 @@
 @media (max-width: 768px) {
   .Header {
     padding: 1rem;
-    flex-direction: column;
+    // flex-direction: column;
     gap: 1rem;
 
     .Header_left {
@@ -169,7 +172,7 @@
 
         ul {
           justify-content: center;
-          flex-wrap: wrap;
+          // flex-wrap: wrap;
         }
       }
     }
@@ -177,7 +180,7 @@
     .Header_right {
       width: 100%;
       justify-content: center;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
       gap: 1rem;
 
       .search_box {
@@ -204,7 +207,7 @@
   .Header {
     .Header_left {
       .logo h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
 
       .header_navbar ul {
@@ -217,7 +220,8 @@
     }
 
     .Header_right {
-      gap: 0.8rem;
+      gap: 0.3rem;
+      // display: none;
 
       .login_button button {
         padding: 0.4rem 0.8rem;

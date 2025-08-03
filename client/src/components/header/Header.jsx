@@ -10,7 +10,11 @@ import { setAuthUser } from '../../redux/authSlice';
 function Header() {
 
   const { user } = useSelector(store => store.auth)
-  console.log(user)
+  // console.log(user)
+
+  const isAdmin = user?._id?.toString() === "6887a72961297d74aaeb7025";
+
+  console.log(isAdmin)
 
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -19,7 +23,7 @@ function Header() {
     e.preventDefault();
     try {
       const res = await axios.get(`${baseUrl}/user/logout`);
-      if(res.data.success){
+      if (res.data.success) {
         dispatch(setAuthUser(null));
       }
     } catch (error) {
@@ -73,6 +77,8 @@ function Header() {
           </button>
         </div>
 
+        {/* notification display is none  */}
+
         <div className="notification_icon">
           <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
@@ -80,21 +86,30 @@ function Header() {
             </svg>
           </button>
         </div>
-        <div className="add_icon">
-          <button onClick={() => navigate('add')} >
-            Add +
-          </button>
-        </div>
 
-        {user ?
+        {isAdmin ?
+          <>
+            <div className="add_icon">
+              <button onClick={() => navigate('add')} >
+                Add +
+              </button>
+            </div>
+
+            {user ?
+              <div className="login_button">
+                <button onClick={logoutHandler} >Logout</button>
+              </div> :
+              <div className="login_button">
+                <button onClick={() => navigate('/login')} >Login</button>
+              </div>
+
+            }
+          </> :
           <div className="login_button">
-            <button onClick={logoutHandler} >Logout</button>
-          </div> :
-          <div className="login_button">
-            <button onClick={() => navigate('/login')} >Login</button>
+            <button>𝄞</button>
           </div>
-
         }
+
       </div>
     </div>
   );
